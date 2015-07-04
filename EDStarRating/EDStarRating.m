@@ -22,6 +22,7 @@
 @synthesize starHighlightedImage;
 @synthesize rating=_rating;
 @synthesize maxRating;
+@synthesize minRating;
 @synthesize backgroundImage;
 @synthesize editable;
 @synthesize delegate=_delegate;
@@ -40,6 +41,7 @@
 -(void)setDefaultProperties
 {
     maxRating=5.0;
+    minRating = 0;
     _rating=0.0;
     horizontalMargin=10.0;
     displayMode = EDStarRatingDisplayFull;
@@ -282,6 +284,9 @@
                 }
             }
             stars+=increment;
+        } else {
+            stars = stars < minRating ? minRating : stars;
+            break;
         }
     }
     return stars;

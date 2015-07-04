@@ -55,6 +55,7 @@ typedef UIImage     EDImage;
 @property (nonatomic,strong) EDImage *starHighlightedImage;
 @property (nonatomic,strong) EDImage *starImage;
 @property (nonatomic) NSInteger maxRating;
+@property (nonatomic) NSInteger minRating;
 @property (nonatomic) float rating;
 @property (nonatomic) CGFloat horizontalMargin;
 @property (nonatomic) BOOL editable;
